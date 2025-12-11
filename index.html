@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratyasha Bhanu - Project Manager & Workflow Automation Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .hero h2 {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #2d3748;
+        }
+        
+        /* About Section */
+        .about {
+            background: white;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+        
+        /* Services Section */
+        .services {
+            background: #f8f9fa;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        .service-card p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            background: white;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .case-study {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .case-study h3 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+        
+        .case-study-item {
+            margin-bottom: 15px;
+        }
+        
+        .case-study-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .case-study-item p {
+            color: #4a5568;
+            padding-left: 10px;
+        }
+        
+        /* Tools Section */
+        .tools {
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .tools-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .tool-item {
+            text-align: center;
+        }
+        
+        .tool-icon {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .tool-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .tool-item p {
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 5px solid #667eea;
+            font-style: italic;
+            color: #4a5568;
+            font-size: 1.1em;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+            margin: 10px 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero h2 {
+                font-size: 1em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .services-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Pratyasha Bhanu</h1>
+            <h2>Project Manager • Trello & Airtable Specialist • Workflow Automation Builder</h2>
+            <p>I build simple, automated systems that turn messy processes into clear, scalable workflows.</p>
+            <div class="hero-buttons">
+                <a href="mailto:pratyasha045@gmail.com" class="btn btn-primary">Contact Me</a>
+                <a href="https://www.linkedin.com/in/pratyashabhanu/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>Hi, I'm Pratyasha! I'm a freelance project manager who specializes in building Trello workflows, Airtable CRMs, dashboards, and automations that actually work.</p>
+                <p>I have a passion for organizing chaos into simple, repeatable systems. Whether it's scattered leads, unclear priorities, or manual processes eating up your time—I translate business needs into functional, easy-to-use tools that save hours of work.</p>
+                <p>My focus is always on clarity, usability, and creating systems that your team can actually adopt and love using. I don't just build databases—I build solutions that make your work life easier.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Trello Workflow Setup</h3>
+                    <p>Custom boards, labels, task stages, and automations designed to match your exact process and keep your team aligned.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🗂️</div>
+                    <h3>Airtable CRM & Database Design</h3>
+                    <p>Lead pipelines, linked records, forms, filtered views, and dashboards that give you complete visibility and control.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Automation Setup (Inside Airtable Only)</h3>
+                    <p>Automated reminders, notifications, status updates, and follow-up systems that run on autopilot.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Project Dashboards & Reporting</h3>
+                    <p>Clear visual summaries for deadlines, progress, and priorities so you always know what's happening at a glance.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📖</div>
+                    <h3>SOPs & Handover Training</h3>
+                    <p>PDF guides + short screen-recorded walkthroughs so your team can use the system easily without constant support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfolio / Case Studies</h2>
+            <div class="portfolio-grid">
+                <div class="case-study">
+                    <h3>Case Study 1 — Airtable CRM Build</h3>
+                    <div class="case-study-item">
+                        <strong>Problem:</strong>
+                        <p>Leads scattered across emails and spreadsheets; no follow-up system in place</p>
+                    </div>
+                    <div class="case-study-item">
+                        <strong>Solution:</strong>
+                        <p>Built comprehensive CRM with automated reminders and status tracking</p>
+                    </div>
+                    <div class="case-study-item">
+                        <strong>Deliverables:</strong>
+                        <p>Airtable base + automations + dashboard + training guide</p>
+                    </div>
+                    <div class="case-study-item">
+                        <strong>Impact:</strong>
+                        <p>Faster follow-up and clear visibility into the entire sales pipeline</p>
+                    </div>
+                </div>
+                
+                <div class="case-study">
+                    <h3>Case Study 2 — Trello Agency Workflow</h3>
+                    <div class="case-study-item">
+                        <strong>Problem:</strong>
+                        <p>Tasks were being missed; priorities unclear across the team</p>
+                    </div>
+                    <div class="case-study-item">
+                        <strong>Solution:</strong>
+                        <p>Designed Trello workflow with clear stages, color-coded labels, and automations</p>
+                    </div>
+                    <div class="case-study-item">
+                        <strong>Deliverables:</strong>
+                        <p>Custom Trello board + automation rules + team training</p>
+                    </div>
+                    <div class="case-study-item">
+                        <strong>Impact:</strong>
+                        <p>Reduced missed deadlines and improved team clarity on priorities</p>
+                    </div>
+                </div>
+                
+                <div class="case-study">
+                    <h3>Case Study 3 — Operations Dashboard</h3>
+                    <div class="case-study-item">
+                        <strong>Problem:</strong>
+                        <p>No central view of tasks and workload; management flying blind</p>
+                    </div>
+                    <div class="case-study-item">
+                        <strong>Solution:</strong>
+                        <p>Created project dashboard showing progress, workload distribution, and overdue tasks</p>
+                    </div>
+                    <div class="case-study-item">
+                        <strong>Deliverables:</strong>
+                        <p>Airtable dashboard + filtered views + automated reports</p>
+                    </div>
+                    <div class="case-study-item">
+                        <strong>Impact:</strong>
+                        <p>Management got a single place to monitor progress and make informed decisions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools">
+        <div class="container">
+            <h2 class="section-title">Tools I Use</h2>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <div class="tool-icon">📋</div>
+                    <p>Trello</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">🗂️</div>
+                    <p>Airtable</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    "Pratyasha transformed our workflow into a simple automated system. We went from chaos to clarity in just a few weeks."
+                </div>
+                <div class="testimonial">
+                    "Professional, fast, and easy to work with. She understood exactly what we needed and delivered beyond expectations."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <div class="contact-info">
+                <a href="mailto:pratyasha045@gmail.com">📧 pratyasha045@gmail.com</a>
+                <a href="https://www.linkedin.com/in/pratyashabhanu/" target="_blank">💼 LinkedIn Profile</a>
+            </div>
+            <a href="mailto:pratyasha045@gmail.com" class="btn btn-primary">Start Your Project With Me</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Pratyasha Bhanu. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
